@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Agents.Shared/Agents.Shared.csproj" Id="29978a46-5443-47b7-ba8d-8b1c1d824958" />
+  <Project Path="DevUI_BasicUsage/DevUI_BasicUsage.csproj" Id="1b26235e-2bff-4bd7-aed6-53242e2111ab" />
+  <Project Path="MyAgent/MyAgent.csproj" />
+</Solution>

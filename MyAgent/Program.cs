@@ -1,0 +1,121 @@
+﻿// Copyright (c) Microsoft. All rights reserved.
+
+// This sample shows how to create and use a simple AI agent with AIProjectClient as the backend.
+
+
+
+using Azure.AI.Projects;
+using Azure.Identity;
+using Microsoft.Agents.AI;
+using MyAgent.AllAgents.Agents;
+using MyAgent.AllAgents.AgentWithCodeAct;
+using MyAgent.GetStarted;
+
+namespace MyAgent;
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        var endpoint = Environment.GetEnvironmentVariable("FOUNDRY_PROJECT_ENDPOINT") ?? throw new InvalidOperationException("FOUNDRY_PROJECT_ENDPOINT is not set.");
+        var model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-6-luna";
+
+        // Get started
+        if (false)
+        {
+            var hello = new HelloAgent();
+            await hello.Test();
+
+            var tool = new HelloTool();
+            await tool.Test();
+
+            var turn = new HelloTurn();
+            await turn.Test();
+
+            var memory = new HelloMemory();
+            await memory.Test();
+
+            var workflow = new HelloWorkflow();
+            await workflow.Test();
+        }
+
+        // Agents
+        if (false)
+        {
+            var functionToolsWithApprovals = new FunctionToolsWithApprovals();
+            await functionToolsWithApprovals.Test();
+
+            StructuredOutput structuredOutput = new StructuredOutput();
+            await structuredOutput.Test();
+
+            PersistedConversations persistedConversations = new PersistedConversations();
+            await persistedConversations.Test();
+
+            ThirdPartyChatHistoryStorage thirdPartyChatHistoryStorage = new ThirdPartyChatHistoryStorage();
+            await thirdPartyChatHistoryStorage.Test();
+
+            Observability o = new Observability();
+            await o.Test();
+
+            DependencyInjection d = new DependencyInjection();
+            await d.Test(args);
+
+            AsMcpTool asMcpTool = new AsMcpTool();
+            await asMcpTool.Test(args);
+
+            UsingImages usingImages = new UsingImages();
+            await usingImages.Test(args);
+
+            AsFunctionTool asFunctionTool = new AsFunctionTool();
+            await asFunctionTool.Test(args);
+
+            BackgroundResponsesWithToolsAndPersistence backgroundResponsesWithToolsAndPersistence = new BackgroundResponsesWithToolsAndPersistence();
+            await backgroundResponsesWithToolsAndPersistence.Test();
+
+            Middleware middleware = new Middleware();
+            await middleware.Test();
+
+            Plugins plugins = new Plugins();
+            await plugins.Test(args);
+
+            AdditionalAIContext additionalAIContext = new AdditionalAIContext();
+            await additionalAIContext.Test();
+
+            CompactionPipeline compactionPipeline = new CompactionPipeline();
+            await compactionPipeline.Test();
+
+            InFunctionLoopCheckpointing inFunctionLoopCheckpointing = new InFunctionLoopCheckpointing();
+            await inFunctionLoopCheckpointing.Test(args);
+
+            DynamicFunctionTools dynamicFunctionTools = new DynamicFunctionTools();
+            await dynamicFunctionTools.Test();
+
+            ShellWithEnvironment shellWithEnvironment = new ShellWithEnvironment();
+            await shellWithEnvironment.Test();
+
+            AgentMode agentMode = new AgentMode();
+            await agentMode.Test();
+
+            TodoList todoList = new TodoList();
+            await todoList.Test();
+
+            MultiModelRouting multiModelRouting = new MultiModelRouting();
+            await multiModelRouting.Test();
+        }
+
+        // Agent With Code Act
+        if (false)
+        {
+            Interpreter interpreter = new Interpreter();
+            await interpreter.Test();
+
+            ToolEnabled toolEnabled = new ToolEnabled();
+            await toolEnabled.Test();
+
+            ManualWiring manualWiring = new ManualWiring();
+            await manualWiring.Test();
+        }
+
+
+    }
+}
