@@ -1,0 +1,19 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@host = http://localhost:5000
+
+### Create a response
+POST {{host}}/responses
+Content-Type: application/json
+
+{
+  "input": "What is the weather in Tokyo?"
+}
+
+### Create a streaming response
+POST {{host}}/responses
+Content-Type: application/json
+
+{
+  "input": "What is the weather in Tokyo?",
+  "stream": true
+}

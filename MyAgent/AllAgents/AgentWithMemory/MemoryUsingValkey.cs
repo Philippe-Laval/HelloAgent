@@ -1,4 +1,5 @@
-﻿using Azure.AI.Projects;
+﻿using Azure.AI.Extensions.OpenAI;
+using Azure.AI.Projects;
 using Azure.Identity;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Valkey;
@@ -37,7 +38,13 @@ namespace MyAgent.AllAgents.AgentWithMemory
                     MaxMessages = 20
                 });
 
+            // Disable service-side stored output: ChatHistoryProvider is the single source of
+            // truth for this conversation and must not be combined with a ConversationId.
+#pragma warning disable MAAI001, OPENAI001
             AIAgent historyAgent = new AIProjectClient(new Uri(endpoint), new DefaultAzureCredential())
+                .GetProjectOpenAIClient()
+                .GetProjectResponsesClient()
+                .AsIChatClientWithStoredOutputDisabled(deploymentName)
                 .AsAIAgent(new ChatClientAgentOptions()
                 {
                     ChatOptions = new() {
@@ -46,6 +53,7 @@ namespace MyAgent.AllAgents.AgentWithMemory
                     },
                     ChatHistoryProvider = historyProvider
                 });
+#pragma warning restore MAAI001, OPENAI001
 
             AgentSession session1 = await historyAgent.CreateSessionAsync();
             Console.WriteLine(await historyAgent.RunAsync("Hello! My name is Alex and I'm a software engineer.", session1));

@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Folder Include="AllAgents\DevUI\" />
+    <Folder Include="Workflows\" />
   </ItemGroup>
 
 </Project>

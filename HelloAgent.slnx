@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Hosting/">
+    <Project Path="LocalResponseClient/LocalResponseClient.csproj" Id="90a34f79-2f7e-4b5f-9671-8c11f9b1e7dd" />
+    <Project Path="LocalResponseServer/LocalResponseServer.csproj" Id="9893648b-1588-4897-ad2e-db293121934c" />
+  </Folder>
   <Project Path="Agents.Shared/Agents.Shared.csproj" Id="29978a46-5443-47b7-ba8d-8b1c1d824958" />
   <Project Path="DevUI_BasicUsage/DevUI_BasicUsage.csproj" Id="1b26235e-2bff-4bd7-aed6-53242e2111ab" />
   <Project Path="MyAgent/MyAgent.csproj" />
