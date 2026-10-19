@@ -1,0 +1,21 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@workflowHost = http://localhost:5001
+@previousResponseId = resp_mSGYXj7vCqQmuYu1pBiEXgnSW6bcEGQKJjWyoaRex25oE08T
+
+### Create a workflow response
+POST {{workflowHost}}/responses
+Content-Type: application/json
+
+{
+  "input": "{\"topic\": \"electric SUV\", \"style\": \"playful\", \"audience\": \"young families\"}"
+}
+
+### Continue the workflow response
+### Take the "id" (resp_...) from the response above and pass it as previous_response_id:
+POST {{workflowHost}}/responses
+Content-Type: application/json
+
+{
+  "input": "Make it a little more premium.",
+  "previous_response_id": "{{previousResponseId}}"
+}
