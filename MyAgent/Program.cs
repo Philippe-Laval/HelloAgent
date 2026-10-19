@@ -9,6 +9,7 @@ using Azure.Identity;
 using Microsoft.Agents.AI;
 using MyAgent.AllAgents.Agents;
 using MyAgent.AllAgents.AgentWithCodeAct;
+using MyAgent.AllAgents.AgentWithMemory;
 using MyAgent.GetStarted;
 
 namespace MyAgent;
@@ -116,6 +117,8 @@ public class Program
             await manualWiring.Test();
         }
 
+        ChatHistoryMemory chatHistoryMemory = new ChatHistoryMemory();
+        await chatHistoryMemory.Test();
 
     }
 }
