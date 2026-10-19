@@ -117,8 +117,21 @@ public class Program
             await manualWiring.Test();
         }
 
-        ChatHistoryMemory chatHistoryMemory = new ChatHistoryMemory();
-        await chatHistoryMemory.Test();
+        // Agent With Memory
+        if (false)
+        {
+            ChatHistoryMemory chatHistoryMemory = new ChatHistoryMemory();
+            await chatHistoryMemory.Test();
+
+            FileMemoryProviderTest fileMemoryProviderTest = new FileMemoryProviderTest();
+            await fileMemoryProviderTest.Test();
+
+        }
+
+        MemoryUsingValkey memoryUsingValkey = new MemoryUsingValkey();
+        await memoryUsingValkey.Test();
+
+
 
     }
 }

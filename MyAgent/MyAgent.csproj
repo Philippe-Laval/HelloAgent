@@ -24,6 +24,7 @@
     <PackageReference Include="Microsoft.Agents.AI.Hyperlight" Version="1.25.0-preview.261014.1" />
     <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.25.0" />
     <PackageReference Include="Microsoft.Agents.AI.Tools.Shell" Version="1.25.0-preview.261014.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Valkey" Version="1.25.0-alpha.261014.1" />
     <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative" Version="1.25.0" />
     <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative.Mcp" Version="1.25.0" />
     <PackageReference Include="Microsoft.Agents.ObjectModel" Version="2026.10.14.272" />
@@ -33,6 +34,7 @@
     <PackageReference Include="ModelContextProtocol" Version="2.2.0" />
     <PackageReference Include="OpenTelemetry" Version="1.19.1" />
     <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.19.1" />
+    <PackageReference Include="Valkey.Glide" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
