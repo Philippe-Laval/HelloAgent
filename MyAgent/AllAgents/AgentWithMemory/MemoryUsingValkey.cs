@@ -40,7 +40,10 @@ namespace MyAgent.AllAgents.AgentWithMemory
             AIAgent historyAgent = new AIProjectClient(new Uri(endpoint), new DefaultAzureCredential())
                 .AsAIAgent(new ChatClientAgentOptions()
                 {
-                    ChatOptions = new() { ModelId = deploymentName, Instructions = "You are a helpful assistant that remembers our conversation." },
+                    ChatOptions = new() {
+                        ModelId = deploymentName, 
+                        Instructions = "You are a helpful assistant that remembers our conversation." 
+                    },
                     ChatHistoryProvider = historyProvider
                 });
 
