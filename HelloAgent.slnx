@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/AGUI/">
+    <Project Path="BackendToolsClient/BackendToolsClient.csproj" Id="78fbec18-a94c-400c-abbb-d674f7aaf2f5" />
     <Project Path="BackendToolsServer/BackendToolsServer.csproj" Id="5c6d6cb3-1ba4-4d61-ae77-c946930710ad" />
     <Project Path="GettingStartedClient/GettingStartedClient.csproj" Id="679ca800-428b-4d50-ba8f-46d65d4f7b5f" />
     <Project Path="GettingStartedServer/GettingStartedServer.csproj" Id="a79a5a1b-8311-46a7-b2c8-f824caa75e7e" />
