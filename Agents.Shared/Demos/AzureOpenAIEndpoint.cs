@@ -15,7 +15,7 @@ public static class AzureOpenAIEndpoint
             return null;
         }
 
-        Uri endpointUri = new(endpoint, UriKind.Absolute);
+        Uri endpointUri = new Uri(endpoint, UriKind.Absolute);
         if (endpointUri.AbsolutePath.TrimEnd('/').EndsWith("/openai/v1", StringComparison.OrdinalIgnoreCase))
         {
             return endpointUri;

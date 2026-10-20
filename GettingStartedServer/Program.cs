@@ -9,6 +9,7 @@ using SampleHelpers;
 namespace GettingStartedServer;
 
 #pragma warning disable OPENAI001
+
 public class Program
 {
     public static async Task Main(string[] args)
