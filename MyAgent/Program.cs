@@ -10,6 +10,7 @@ using Microsoft.Agents.AI;
 using MyAgent.AllAgents.Agents;
 using MyAgent.AllAgents.AgentWithCodeAct;
 using MyAgent.AllAgents.AgentWithMemory;
+using MyAgent.AllAgents.Evaluation;
 using MyAgent.GetStarted;
 
 namespace MyAgent;
@@ -126,12 +127,12 @@ public class Program
             FileMemoryProviderTest fileMemoryProviderTest = new FileMemoryProviderTest();
             await fileMemoryProviderTest.Test();
 
+            MemoryUsingValkey memoryUsingValkey = new MemoryUsingValkey();
+            await memoryUsingValkey.Test();
         }
 
-        MemoryUsingValkey memoryUsingValkey = new MemoryUsingValkey();
-        await memoryUsingValkey.Test();
-
-
+        Evaluation_SimpleEval evaluation_SimpleEval = new Evaluation_SimpleEval();
+        await evaluation_SimpleEval.Test();
 
     }
 }
