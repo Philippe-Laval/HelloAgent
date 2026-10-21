@@ -11,6 +11,7 @@ using MyAgent.AllAgents.Agents;
 using MyAgent.AllAgents.AgentWithCodeAct;
 using MyAgent.AllAgents.AgentWithMemory;
 using MyAgent.AllAgents.Evaluation;
+using MyAgent.AllAgents.RAG;
 using MyAgent.GetStarted;
 
 namespace MyAgent;
@@ -142,11 +143,15 @@ public class Program
 
             Evaluation_Multimodal evaluation_Multimodal = new Evaluation_Multimodal();
             await evaluation_Multimodal.Test();
+
+            Evaluation_ExpectedOutputs evaluation_ExpectedOutputs = new Evaluation_ExpectedOutputs();
+            await evaluation_ExpectedOutputs.Test();
         }
 
-        Evaluation_ExpectedOutputs evaluation_ExpectedOutputs = new Evaluation_ExpectedOutputs();
-        await evaluation_ExpectedOutputs.Test();
 
+
+        BasicTextRAG basicTextRAG = new BasicTextRAG();
+        await basicTextRAG.Test();
 
     }
 }
