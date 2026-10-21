@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="AGUI.Client" Version="1.0.1" />
+		<PackageReference Include="Microsoft.Agents.AI" Version="1.25.0" />
+	</ItemGroup>
+	
 </Project>
