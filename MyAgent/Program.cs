@@ -148,10 +148,14 @@ public class Program
             await evaluation_ExpectedOutputs.Test();
         }
 
+        // RAG
+        if (false)
+        {
+            BasicTextRAG basicTextRAG = new BasicTextRAG();
+            await basicTextRAG.Test();
+        }
 
-
-        BasicTextRAG basicTextRAG = new BasicTextRAG();
-        await basicTextRAG.Test();
-
+        CustomRAGDataSource customRAGDataSource = new CustomRAGDataSource();
+        await customRAGDataSource.Test();
     }
 }

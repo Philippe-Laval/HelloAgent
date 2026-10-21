@@ -38,7 +38,7 @@ namespace MyAgent.AllAgents.RAG
             var foundryOpenAIEndpoint = Environment.GetEnvironmentVariable("FOUNDRY_OPENAI_ENDPOINT");
             var openAIEndpoint = foundryOpenAIEndpoint is { Length: > 0 } configuredEndpoint
                 ? new Uri(configuredEndpoint)
-                : GetOpenAIEndpoint(new Uri(endpoint));
+                : GetOpenAIEndpointFromProjectEndPoint(new Uri(endpoint));
             AzureOpenAIClient openAIClient = new(openAIEndpoint, new DefaultAzureCredential());
 
             // Does not work as indicated in the source code, so we are using the OpenAIClient directly to get the embedding client.
@@ -103,7 +103,7 @@ namespace MyAgent.AllAgents.RAG
             Console.WriteLine(await agent.RunAsync("What is the best way to maintain the TrailRunner tent fabric?", session));
         }
 
-        private static Uri GetOpenAIEndpoint(Uri projectEndpoint)
+        private static Uri GetOpenAIEndpointFromProjectEndPoint(Uri projectEndpoint)
         {
             const string foundryProjectHostSuffix = ".services.ai.azure.com";
 
@@ -115,7 +115,7 @@ namespace MyAgent.AllAgents.RAG
             var accountName = projectEndpoint.Host[..^foundryProjectHostSuffix.Length];
             //return new Uri($"https://{accountName}.cognitiveservices.azure.com/");
             return new Uri($"https://{accountName}.services.ai.azure.com/");
-            // services.ai.azure.com
+            // NB : works with cognitiveservices.azure.com or services.ai.azure.com
         }
 
         // Produces some sample search documents.
