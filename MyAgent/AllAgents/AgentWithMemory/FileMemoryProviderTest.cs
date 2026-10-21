@@ -20,7 +20,7 @@ namespace MyAgent.AllAgents.AgentWithMemory
         public async Task Test()
         {
             var endpoint = Environment.GetEnvironmentVariable("FOUNDRY_PROJECT_ENDPOINT") ?? throw new InvalidOperationException("FOUNDRY_PROJECT_ENDPOINT is not set.");
-            var deploymentName = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-5.4-mini";
+            var deploymentName = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-6-luna";
 
             // The id of the user that we are storing memories for.
             // It is used below to give each user their own memory folder.

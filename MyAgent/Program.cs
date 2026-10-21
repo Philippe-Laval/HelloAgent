@@ -131,8 +131,22 @@ public class Program
             await memoryUsingValkey.Test();
         }
 
-        Evaluation_SimpleEval evaluation_SimpleEval = new Evaluation_SimpleEval();
-        await evaluation_SimpleEval.Test();
+        // Evaluation
+        if (false)
+        {
+            Evaluation_SimpleEval evaluation_SimpleEval = new Evaluation_SimpleEval();
+            await evaluation_SimpleEval.Test();
+
+            Evaluation_CustomEvals evaluation_CustomEvals = new Evaluation_CustomEvals();
+            await evaluation_CustomEvals.Test();
+
+            Evaluation_Multimodal evaluation_Multimodal = new Evaluation_Multimodal();
+            await evaluation_Multimodal.Test();
+        }
+
+        Evaluation_ExpectedOutputs evaluation_ExpectedOutputs = new Evaluation_ExpectedOutputs();
+        await evaluation_ExpectedOutputs.Test();
+
 
     }
 }

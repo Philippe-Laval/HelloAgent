@@ -26,7 +26,7 @@ internal class Program
     static async Task Main(string[] args)
     {
         string serverUrl = Environment.GetEnvironmentVariable("RESPONSES_SERVER_URL") ?? "http://localhost:5001";
-        string model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-5.4-mini";
+        string model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-6-luna";
 
         ResponsesClient responseClient = new OpenAIClient(
                 new ApiKeyCredential("not-needed"),

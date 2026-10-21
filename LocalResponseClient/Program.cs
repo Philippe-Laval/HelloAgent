@@ -25,7 +25,7 @@ internal class Program
 
         // The server ignores the model id (it runs its own configured agent), but the OpenAI SDK requires one to
         // shape the request. Reuse FOUNDRY_MODEL for parity with the server sample.
-        string model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-5.4-mini";
+        string model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-6-luna";
 
         string[] prompts =
         [

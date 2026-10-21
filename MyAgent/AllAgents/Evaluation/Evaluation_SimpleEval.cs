@@ -44,6 +44,8 @@ namespace MyAgent.AllAgents.Evaluation
 
             Console.WriteLine();
 
+            // Relevance and Coherence quality evaluators.
+            // Score between 1 and 5, where 1 is considered a poor score, and 5 is considered an excellent score
             for (int i = 0; i < results.Items.Count; i++)
             {
                 Console.WriteLine($"Query: {queries[i]}");

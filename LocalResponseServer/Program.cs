@@ -43,7 +43,7 @@ public class Program
         // Configuration via environment variables (never hardcode secrets).
         string endpoint = Environment.GetEnvironmentVariable("FOUNDRY_PROJECT_ENDPOINT")
             ?? throw new InvalidOperationException("FOUNDRY_PROJECT_ENDPOINT is not set.");
-        string model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-5.4-mini";
+        string model = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-6-luna";
 
         // WARNING: DefaultAzureCredential is convenient for development but requires careful consideration in production.
         // In production, consider using a specific credential (e.g., ManagedIdentityCredential) to avoid

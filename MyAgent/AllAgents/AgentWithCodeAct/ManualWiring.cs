@@ -17,7 +17,7 @@ namespace MyAgent.AllAgents.AgentWithCodeAct
         public async Task Test()
         {
             var endpoint = Environment.GetEnvironmentVariable("FOUNDRY_PROJECT_ENDPOINT") ?? throw new InvalidOperationException("FOUNDRY_PROJECT_ENDPOINT is not set.");
-            var deploymentName = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-5.4-mini";
+            var deploymentName = Environment.GetEnvironmentVariable("FOUNDRY_MODEL") ?? "gpt-6-luna";
 
             AIFunction calculate = AIFunctionFactory.Create(
                 (double a, double b) => a * b,
