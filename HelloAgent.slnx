@@ -14,6 +14,8 @@
     <Project Path="ConsoleReactiveComponents/ConsoleReactiveComponents.csproj" Id="6ac4a9aa-0a0c-438e-8cf6-1ccfb19c550c" />
     <Project Path="ConsoleReactiveFramework/ConsoleReactiveFramework.csproj" Id="9d6f7ae1-4bb3-4959-a6fa-b619d8bc4d5d" />
     <Project Path="Harness_Shared_Console/Harness_Shared_Console.csproj" Id="2ff63f92-ef53-4702-8fcc-55cffc41c9c9" />
+    <Project Path="Harness_Shared_Console_OpenAI/Harness_Shared_Console_OpenAI.csproj" Id="f6537842-9d44-4da2-afd8-12ae1df3ecaf" />
+    <Project Path="Harness_Step01_Research/Harness_Step01_Research.csproj" Id="7f7bd2ec-9e85-4f96-9ad9-ebb0e34a0136" />
   </Folder>
   <Folder Name="/Hosting/">
     <Project Path="LocalResponseClient/LocalResponseClient.csproj" Id="90a34f79-2f7e-4b5f-9671-8c11f9b1e7dd" />
