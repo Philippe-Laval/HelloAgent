@@ -10,6 +10,11 @@
   <Folder Name="/DevUI/">
     <Project Path="DevUI_BasicUsage/DevUI_BasicUsage.csproj" Id="1b26235e-2bff-4bd7-aed6-53242e2111ab" />
   </Folder>
+  <Folder Name="/Harness/">
+    <Project Path="ConsoleReactiveComponents/ConsoleReactiveComponents.csproj" Id="6ac4a9aa-0a0c-438e-8cf6-1ccfb19c550c" />
+    <Project Path="ConsoleReactiveFramework/ConsoleReactiveFramework.csproj" Id="9d6f7ae1-4bb3-4959-a6fa-b619d8bc4d5d" />
+    <Project Path="Harness_Shared_Console/Harness_Shared_Console.csproj" Id="2ff63f92-ef53-4702-8fcc-55cffc41c9c9" />
+  </Folder>
   <Folder Name="/Hosting/">
     <Project Path="LocalResponseClient/LocalResponseClient.csproj" Id="90a34f79-2f7e-4b5f-9671-8c11f9b1e7dd" />
     <Project Path="LocalResponseServer/LocalResponseServer.csproj" Id="9893648b-1588-4897-ad2e-db293121934c" />
