@@ -18,6 +18,32 @@
 //   /mode   — Get or set the current agent mode.
 //   /exit   — End the session.
 
+// https://devblogs.microsoft.com/agent-framework/meet-your-agent-harness-and-claw/
+// https://devblogs.microsoft.com/agent-framework/agent-harness-working-with-your-data-safely/
+/*
+How plan mode works
+
+Why does plan mode ask questions and request approval, while execute mode just gets on with it? The trick is structured output.
+
+The harness ships with two modes out of the box – plan (the default) and execute – and the console’s planning observer treats them differently. 
+In execute mode the model replies with ordinary prose and gets to work. 
+In plan mode, the console asks the model for a structured response instead of free-form text, by setting a response format with a JSON schema
+ */
+
+/*
+Turning features off
+Everything the harness gives us – todos, agent modes, web search, file memory, file access, tool approval – is on by default and individually toggleable. If a feature doesn’t fit your scenario, switch it off with a single option. For example, to drop the todo list and web search:
+
+AIAgent agent = chatClient.AsHarnessAgent(new HarnessAgentOptions
+{
+    DisableTodoProvider = true,
+    DisableWebSearch = true,
+    ChatOptions = new ChatOptions { Instructions = instructions, Tools = [ ... ] },
+});
+
+DisableTodoProvider, DisableAgentModeProvider, DisableWebSearch, DisableFileMemory, DisableFileAccess, and DisableToolApproval
+*/
+
 using System.ClientModel.Primitives;
 using Azure.AI.Projects;
 using Azure.Identity;
