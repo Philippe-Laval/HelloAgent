@@ -10,6 +10,10 @@ using Microsoft.Extensions.AI;
 
 namespace MyAgent.Workflows.Orchestration;
 
+#pragma warning disable OPENAI001 // Suppress experimental API warnings for Responses API usage.
+#pragma warning disable MAAI001  // Suppress experimental API warnings for Agents AI experiments.
+
+
 public class Handoff
 {
     public async Task Test()
@@ -23,9 +27,18 @@ public class Handoff
         // latency issues, unintended credential probing, and potential security risks from fallback mechanisms.
         AIProjectClient projectClient = new(new Uri(endpoint), new DefaultAzureCredential());
 
+        // Function tools with reasoning_effort are not supported for gpt-6-luna in /v1/chat/completions.
+        // To use function tools, use /v1/responses or set reasoning_effort to 'none'.
+
+        // Uses the /v1/chat/completions endpoint, which does not support function tools with reasoning_effort.
+        // IChatClient chatClient = projectClient.ProjectOpenAIClient
+        //                              .GetChatClient(deploymentName)
+        //                              .AsIChatClient();
+
+        // Uses the /v1/responses endpoint, which supports function tools with reasoning_effort.
         IChatClient chatClient = projectClient.ProjectOpenAIClient
-                                              .GetChatClient(deploymentName)
-                                              .AsIChatClient();
+                                              .GetResponsesClient()
+                                              .AsIChatClient(deploymentName);
 
         Workflow workflow = CreateWorkflow(chatClient);
 
