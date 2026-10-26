@@ -16,6 +16,7 @@ using MyAgent.GetStarted;
 using MyAgent.Workflows;
 using MyAgent.Workflows.GetStarted;
 using MyAgent.Workflows.Loop;
+using MyAgent.Workflows.Orchestration;
 
 namespace MyAgent;
 
@@ -183,7 +184,17 @@ public class Program
             await workflow_07_WriterCriticWorkflow.Test();
         }
 
-        WorkflowLoopSample workflowLoopSample = new WorkflowLoopSample();
-        await workflowLoopSample.Test();
+        // Loop
+        if (false)
+        {
+            WorkflowLoopSample workflowLoopSample = new WorkflowLoopSample();
+            await workflowLoopSample.Test();
+        }
+
+        // Function tools with reasoning_effort are not supported for gpt-6-luna in /v1/chat/completions.
+        // To use function tools, use /v1/responses or set reasoning_effort to 'none'.
+
+        Handoff handoff = new Handoff();
+        await handoff.Test();
     }
 }

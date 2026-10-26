@@ -55,12 +55,12 @@ namespace MyAgent.AllAgents.Agents
                     Modes =
                     [
                         new AgentModeProviderOptions.AgentMode(
-                "concise",
-                "Answer in a single short sentence. Do not elaborate unless the user explicitly asks for more detail."),
-            new AgentModeProviderOptions.AgentMode(
-                "detailed",
-                "Answer thoroughly. Explain your reasoning, provide examples, and cover relevant edge cases."),
-        ],
+                            "concise",
+                            "Answer in a single short sentence. Do not elaborate unless the user explicitly asks for more detail."),
+                        new AgentModeProviderOptions.AgentMode(
+                            "detailed",
+                            "Answer thoroughly. Explain your reasoning, provide examples, and cover relevant edge cases."),
+                    ],
                 });
 
                 availableModes = ["concise", "detailed"];
