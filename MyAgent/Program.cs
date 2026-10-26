@@ -13,6 +13,7 @@ using MyAgent.AllAgents.AgentWithMemory;
 using MyAgent.AllAgents.Evaluation;
 using MyAgent.AllAgents.RAG;
 using MyAgent.GetStarted;
+using MyAgent.Workflows;
 
 namespace MyAgent;
 
@@ -153,9 +154,23 @@ public class Program
         {
             BasicTextRAG basicTextRAG = new BasicTextRAG();
             await basicTextRAG.Test();
+
+            CustomRAGDataSource customRAGDataSource = new CustomRAGDataSource();
+            await customRAGDataSource.Test();
         }
 
-        CustomRAGDataSource customRAGDataSource = new CustomRAGDataSource();
-        await customRAGDataSource.Test();
+        // Workflows
+        if (false)
+        {
+            Workflow_01_Streaming workflow_01_Streaming = new Workflow_01_Streaming();
+            await workflow_01_Streaming.Test();
+
+            Workflow_02_AgentsInWorkflows workflow_02_AgentsInWorkflows = new Workflow_02_AgentsInWorkflows();
+            await workflow_02_AgentsInWorkflows.Test();
+
+        }
+
+        Workflow_03_AgentWorkflowPatterns workflow_03_AgentWorkflowPatterns = new Workflow_03_AgentWorkflowPatterns();
+        await workflow_03_AgentWorkflowPatterns.Test();
     }
 }

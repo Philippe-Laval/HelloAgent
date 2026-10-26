@@ -47,7 +47,6 @@
 
   <ItemGroup>
     <Folder Include="AllAgents\ModelContextProtocol\" />
-    <Folder Include="Workflows\" />
   </ItemGroup>
 
 </Project>
