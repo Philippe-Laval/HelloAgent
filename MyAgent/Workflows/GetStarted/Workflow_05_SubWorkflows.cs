@@ -4,7 +4,7 @@ using System.Text;
 
 using Microsoft.Agents.AI.Workflows;
 
-namespace MyAgent.Workflows;
+namespace MyAgent.Workflows.GetStarted;
 
 public class Workflow_05_SubWorkflows
 {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Microsoft.Agents.AI.Workflows;
 
-namespace MyAgent.Workflows;
+namespace MyAgent.Workflows.GetStarted;
 
 public class Workflow_01_Streaming
 {

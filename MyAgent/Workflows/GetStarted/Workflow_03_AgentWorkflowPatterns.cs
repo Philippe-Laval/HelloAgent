@@ -5,7 +5,7 @@ using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
 
-namespace MyAgent.Workflows;
+namespace MyAgent.Workflows.GetStarted;
 
 public class Workflow_03_AgentWorkflowPatterns
 {

@@ -14,6 +14,8 @@ using MyAgent.AllAgents.Evaluation;
 using MyAgent.AllAgents.RAG;
 using MyAgent.GetStarted;
 using MyAgent.Workflows;
+using MyAgent.Workflows.GetStarted;
+using MyAgent.Workflows.Loop;
 
 namespace MyAgent;
 
@@ -176,9 +178,12 @@ public class Program
 
             Workflow_06_MixedWorkflowAgentsAndExecutors workflow_06_MixedWorkflowAgentsAndExecutors = new Workflow_06_MixedWorkflowAgentsAndExecutors();
             await workflow_06_MixedWorkflowAgentsAndExecutors.Test();
+
+            Workflow_07_WriterCriticWorkflow workflow_07_WriterCriticWorkflow = new Workflow_07_WriterCriticWorkflow();
+            await workflow_07_WriterCriticWorkflow.Test();
         }
 
-        Workflow_07_WriterCriticWorkflow workflow_07_WriterCriticWorkflow = new Workflow_07_WriterCriticWorkflow();
-        await workflow_07_WriterCriticWorkflow.Test();
+        WorkflowLoopSample workflowLoopSample = new WorkflowLoopSample();
+        await workflowLoopSample.Test();
     }
 }
