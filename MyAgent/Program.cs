@@ -170,9 +170,15 @@ public class Program
 
             Workflow_03_AgentWorkflowPatterns workflow_03_AgentWorkflowPatterns = new Workflow_03_AgentWorkflowPatterns();
             await workflow_03_AgentWorkflowPatterns.Test();
+
+            Workflow_05_SubWorkflows workflow_05_SubWorkflows = new Workflow_05_SubWorkflows();
+            await workflow_05_SubWorkflows.Test();
+
+            Workflow_06_MixedWorkflowAgentsAndExecutors workflow_06_MixedWorkflowAgentsAndExecutors = new Workflow_06_MixedWorkflowAgentsAndExecutors();
+            await workflow_06_MixedWorkflowAgentsAndExecutors.Test();
         }
 
-        Workflow_05_SubWorkflows workflow_05_SubWorkflows = new Workflow_05_SubWorkflows();
-        await workflow_05_SubWorkflows.Test();
+        Workflow_07_WriterCriticWorkflow workflow_07_WriterCriticWorkflow = new Workflow_07_WriterCriticWorkflow();
+        await workflow_07_WriterCriticWorkflow.Test();
     }
 }

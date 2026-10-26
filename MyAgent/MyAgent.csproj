@@ -28,6 +28,10 @@
     <PackageReference Include="Microsoft.Agents.AI.Valkey" Version="1.25.0-alpha.261014.1" />
     <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative" Version="1.25.0" />
     <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative.Mcp" Version="1.25.0" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows.Generators" Version="1.26.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Agents.ObjectModel" Version="2026.10.14.272" />
     <PackageReference Include="Microsoft.Agents.ObjectModel.Json" Version="2026.10.14.272" />
     <PackageReference Include="Microsoft.Agents.ObjectModel.PowerFx" Version="2026.10.14.272" />
