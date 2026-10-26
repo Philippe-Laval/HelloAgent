@@ -168,9 +168,11 @@ public class Program
             Workflow_02_AgentsInWorkflows workflow_02_AgentsInWorkflows = new Workflow_02_AgentsInWorkflows();
             await workflow_02_AgentsInWorkflows.Test();
 
+            Workflow_03_AgentWorkflowPatterns workflow_03_AgentWorkflowPatterns = new Workflow_03_AgentWorkflowPatterns();
+            await workflow_03_AgentWorkflowPatterns.Test();
         }
 
-        Workflow_03_AgentWorkflowPatterns workflow_03_AgentWorkflowPatterns = new Workflow_03_AgentWorkflowPatterns();
-        await workflow_03_AgentWorkflowPatterns.Test();
+        Workflow_05_SubWorkflows workflow_05_SubWorkflows = new Workflow_05_SubWorkflows();
+        await workflow_05_SubWorkflows.Test();
     }
 }
