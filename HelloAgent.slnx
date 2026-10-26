@@ -13,6 +13,7 @@
   <Folder Name="/Harness/">
     <Project Path="Claw_Step01_MeetYourClaw/Claw_Step01_MeetYourClaw.csproj" Id="50ecd321-8c26-4236-a15d-c683bd9f2e00" />
     <Project Path="Claw_Step02_WorkingWithData/Claw_Step02_WorkingWithData.csproj" Id="20101d57-26b4-4790-a9a8-11fb00aa2857" />
+    <Project Path="Claw_Step03_ScalingCapabilities/Claw_Step03_ScalingCapabilities.csproj" Id="e63c5e9d-2743-4192-b8ed-bdfa3703de5a" />
     <Project Path="ConsoleReactiveComponents/ConsoleReactiveComponents.csproj" Id="6ac4a9aa-0a0c-438e-8cf6-1ccfb19c550c" />
     <Project Path="ConsoleReactiveFramework/ConsoleReactiveFramework.csproj" Id="9d6f7ae1-4bb3-4959-a6fa-b619d8bc4d5d" />
     <Project Path="Harness_Shared_Console/Harness_Shared_Console.csproj" Id="2ff63f92-ef53-4702-8fcc-55cffc41c9c9" />
