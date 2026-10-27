@@ -14,6 +14,7 @@ using MyAgent.AllAgents.Evaluation;
 using MyAgent.AllAgents.RAG;
 using MyAgent.GetStarted;
 using MyAgent.Workflows;
+using MyAgent.Workflows.Checkpoint;
 using MyAgent.Workflows.Concurrent;
 using MyAgent.Workflows.GetStarted;
 using MyAgent.Workflows.HumanInTheLoop;
@@ -224,7 +225,14 @@ public class Program
             await workflowMapReduceSample.Test();
         }
 
-        WorkflowSharedStatesSample workflowSharedStatesSample = new WorkflowSharedStatesSample();
-        await workflowSharedStatesSample.Test();
+        // SharedStates
+        if (false) 
+        {
+            WorkflowSharedStatesSample workflowSharedStatesSample = new WorkflowSharedStatesSample();
+            await workflowSharedStatesSample.Test();
+        }
+
+        WorkflowCheckpointAndRehydrateSample workflowCheckpointAndRehydrateSample = new WorkflowCheckpointAndRehydrateSample();
+        await workflowCheckpointAndRehydrateSample.Test();
     }
 }
