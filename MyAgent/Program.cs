@@ -216,9 +216,12 @@ public class Program
         // Concurrent
         if (false)
         {
+            WorkflowConcurrentSample workflowConcurrentSample = new WorkflowConcurrentSample();
+            await workflowConcurrentSample.Test();
         }
 
-        WorkflowConcurrentSample workflowConcurrentSample = new WorkflowConcurrentSample();
-        await workflowConcurrentSample.Test();
+
+        WorkflowMapReduceSample workflowMapReduceSample = new WorkflowMapReduceSample();
+        await workflowMapReduceSample.Test();
     }
 }
