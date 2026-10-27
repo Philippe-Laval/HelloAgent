@@ -14,7 +14,9 @@ using MyAgent.AllAgents.Evaluation;
 using MyAgent.AllAgents.RAG;
 using MyAgent.GetStarted;
 using MyAgent.Workflows;
+using MyAgent.Workflows.Concurrent;
 using MyAgent.Workflows.GetStarted;
+using MyAgent.Workflows.HumanInTheLoop;
 using MyAgent.Workflows.Loop;
 using MyAgent.Workflows.Orchestration;
 
@@ -199,9 +201,24 @@ public class Program
 
             Handoff handoff = new Handoff();
             await handoff.Test();
+
+            Magentic magentic = new Magentic();
+            await magentic.Test();
         }
-      
-        Magentic magentic = new Magentic();
-        await magentic.Test();
+
+        // HumanInTheLoop
+        if (false)
+        {
+            HumanInTheLoopBasic humanInTheLoopBasic = new HumanInTheLoopBasic();
+            await humanInTheLoopBasic.Test();
+        }
+
+        // Concurrent
+        if (false)
+        {
+        }
+
+        WorkflowConcurrentSample workflowConcurrentSample = new WorkflowConcurrentSample();
+        await workflowConcurrentSample.Test();
     }
 }
