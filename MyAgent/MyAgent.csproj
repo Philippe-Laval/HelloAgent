@@ -52,5 +52,11 @@
   <ItemGroup>
     <Folder Include="AllAgents\ModelContextProtocol\" />
   </ItemGroup>
-
+	
+    <ItemGroup>
+	    <None Include="Resources\*">
+		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    </None>
+    </ItemGroup>
+	
 </Project>

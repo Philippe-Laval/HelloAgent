@@ -19,6 +19,7 @@ using MyAgent.Workflows.GetStarted;
 using MyAgent.Workflows.HumanInTheLoop;
 using MyAgent.Workflows.Loop;
 using MyAgent.Workflows.Orchestration;
+using MyAgent.Workflows.SharedStates;
 
 namespace MyAgent;
 
@@ -218,10 +219,12 @@ public class Program
         {
             WorkflowConcurrentSample workflowConcurrentSample = new WorkflowConcurrentSample();
             await workflowConcurrentSample.Test();
+
+            WorkflowMapReduceSample workflowMapReduceSample = new WorkflowMapReduceSample();
+            await workflowMapReduceSample.Test();
         }
 
-
-        WorkflowMapReduceSample workflowMapReduceSample = new WorkflowMapReduceSample();
-        await workflowMapReduceSample.Test();
+        WorkflowSharedStatesSample workflowSharedStatesSample = new WorkflowSharedStatesSample();
+        await workflowSharedStatesSample.Test();
     }
 }
