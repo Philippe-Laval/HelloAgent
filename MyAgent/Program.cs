@@ -191,10 +191,17 @@ public class Program
             await workflowLoopSample.Test();
         }
 
-        // Function tools with reasoning_effort are not supported for gpt-6-luna in /v1/chat/completions.
-        // To use function tools, use /v1/responses or set reasoning_effort to 'none'.
+        // Orchestration
+        if (false)
+        {
+            // Function tools with reasoning_effort are not supported for gpt-6-luna in /v1/chat/completions.
+            // To use function tools, use /v1/responses or set reasoning_effort to 'none'.
 
-        Handoff handoff = new Handoff();
-        await handoff.Test();
+            Handoff handoff = new Handoff();
+            await handoff.Test();
+        }
+      
+        Magentic magentic = new Magentic();
+        await magentic.Test();
     }
 }
