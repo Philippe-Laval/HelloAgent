@@ -17,11 +17,13 @@ using MyAgent.Workflows;
 using MyAgent.Workflows.Checkpoint;
 using MyAgent.Workflows.Concurrent;
 using MyAgent.Workflows.ConditionalEdges;
+using MyAgent.Workflows.Evaluation;
 using MyAgent.Workflows.GetStarted;
 using MyAgent.Workflows.HumanInTheLoop;
 using MyAgent.Workflows.Loop;
 using MyAgent.Workflows.Orchestration;
 using MyAgent.Workflows.SharedStates;
+using MyAgent.Workflows.Visualization;
 
 namespace MyAgent;
 
@@ -245,9 +247,22 @@ public class Program
 
             WorkflowSwitchCaseSample workflowSwitchCaseSample = new WorkflowSwitchCaseSample();
             await workflowSwitchCaseSample.Test();
+
+            WorkflowMultiSelectionSample workflowMultiSelectionSample = new WorkflowMultiSelectionSample();
+            await workflowMultiSelectionSample.Test();
         }
 
-        WorkflowMultiSelectionSample workflowMultiSelectionSample = new WorkflowMultiSelectionSample();
-        await workflowMultiSelectionSample.Test();
+        // Evaluation
+        if (false)
+        {
+            Evaluation_WorkflowEval evaluation_WorkflowEval = new Evaluation_WorkflowEval();
+            await evaluation_WorkflowEval.Test();
+
+            Evaluation_WorkflowExpectedOutputs evaluation_WorkflowExpectedOutputs = new Evaluation_WorkflowExpectedOutputs();
+            await evaluation_WorkflowExpectedOutputs.Test();
+        }
+
+        WorkflowVisualizationSample workflowVisualizationSample = new WorkflowVisualizationSample();
+        await workflowVisualizationSample.Test();
     }
 }
