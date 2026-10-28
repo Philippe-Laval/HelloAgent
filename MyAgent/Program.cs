@@ -238,10 +238,13 @@ public class Program
         }
 
         // ConditionalEdges
-        if (true)
+        if (false)
         {
             WorkflowEdgeConditionSample workflowEdgeConditionSample = new WorkflowEdgeConditionSample();
             await workflowEdgeConditionSample.Test();
         }
+
+        WorkflowSwitchCaseSample workflowSwitchCaseSample = new WorkflowSwitchCaseSample();
+        await workflowSwitchCaseSample.Test();
     }
 }
