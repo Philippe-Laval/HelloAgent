@@ -242,9 +242,12 @@ public class Program
         {
             WorkflowEdgeConditionSample workflowEdgeConditionSample = new WorkflowEdgeConditionSample();
             await workflowEdgeConditionSample.Test();
+
+            WorkflowSwitchCaseSample workflowSwitchCaseSample = new WorkflowSwitchCaseSample();
+            await workflowSwitchCaseSample.Test();
         }
 
-        WorkflowSwitchCaseSample workflowSwitchCaseSample = new WorkflowSwitchCaseSample();
-        await workflowSwitchCaseSample.Test();
+        WorkflowMultiSelectionSample workflowMultiSelectionSample = new WorkflowMultiSelectionSample();
+        await workflowMultiSelectionSample.Test();
     }
 }
