@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyAgent.Workflows.SharedStates;
+namespace MyAgent;
 
 internal static class Resources
 {

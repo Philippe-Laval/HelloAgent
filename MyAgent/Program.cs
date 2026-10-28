@@ -16,6 +16,7 @@ using MyAgent.GetStarted;
 using MyAgent.Workflows;
 using MyAgent.Workflows.Checkpoint;
 using MyAgent.Workflows.Concurrent;
+using MyAgent.Workflows.ConditionalEdges;
 using MyAgent.Workflows.GetStarted;
 using MyAgent.Workflows.HumanInTheLoop;
 using MyAgent.Workflows.Loop;
@@ -230,9 +231,17 @@ public class Program
         {
             WorkflowSharedStatesSample workflowSharedStatesSample = new WorkflowSharedStatesSample();
             await workflowSharedStatesSample.Test();
+
+            WorkflowCheckpointAndRehydrateSample workflowCheckpointAndRehydrateSample = new WorkflowCheckpointAndRehydrateSample();
+            await workflowCheckpointAndRehydrateSample.Test();
+
         }
 
-        WorkflowCheckpointAndRehydrateSample workflowCheckpointAndRehydrateSample = new WorkflowCheckpointAndRehydrateSample();
-        await workflowCheckpointAndRehydrateSample.Test();
+        // ConditionalEdges
+        if (true)
+        {
+            WorkflowEdgeConditionSample workflowEdgeConditionSample = new WorkflowEdgeConditionSample();
+            await workflowEdgeConditionSample.Test();
+        }
     }
 }
