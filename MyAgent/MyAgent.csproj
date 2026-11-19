@@ -2,45 +2,45 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="Hyperlight.HyperlightSandbox.Api" Version="0.7.0" />
-	<PackageReference Include="Hyperlight.HyperlightSandbox.Extensions.AI" Version="0.7.0" />
-	<PackageReference Include="Hyperlight.HyperlightSandbox.Guest.JavaScript" Version="0.7.0" />
-	<PackageReference Include="Hyperlight.HyperlightSandbox.Guest.Python" Version="0.7.0" />
-	<PackageReference Include="Hyperlight.HyperlightSandbox.PInvoke" Version="0.7.0" />
+	<PackageReference Include="Hyperlight.HyperlightSandbox.Api" Version="0.10.0" />
+	<PackageReference Include="Hyperlight.HyperlightSandbox.Extensions.AI" Version="0.10.0" />
+	<PackageReference Include="Hyperlight.HyperlightSandbox.Guest.JavaScript" Version="0.10.0" />
+	<PackageReference Include="Hyperlight.HyperlightSandbox.Guest.Python" Version="0.10.0" />
+	<PackageReference Include="Hyperlight.HyperlightSandbox.PInvoke" Version="0.10.0" />
 
-    <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
-    <PackageReference Include="Azure.AI.Projects" Version="3.0.0-beta.4" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.9.0-beta.1" />
+    <PackageReference Include="Azure.AI.Projects" Version="3.0.0-beta.6" />
     <PackageReference Include="Azure.Identity" Version="1.21.0" />
-    <PackageReference Include="Azure.Monitor.OpenTelemetry.Exporter" Version="1.10.0" />
+    <PackageReference Include="Azure.Monitor.OpenTelemetry.Exporter" Version="1.11.0-beta.1" />
     <PackageReference Include="CommunityToolkit.VectorData.InMemory" Version="1.0.1" />
-    <PackageReference Include="Microsoft.Agents.AI" Version="1.25.0" />
-    <PackageReference Include="Microsoft.Agents.AI.Foundry" Version="1.25.0-preview.261014.1" />
-    <PackageReference Include="Microsoft.Agents.AI.Hosting.AGUI.AspNetCore" Version="1.25.0-preview.261014.1" />
-    <PackageReference Include="Microsoft.Agents.AI.Hyperlight" Version="1.25.0-preview.261014.1" />
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.25.0" />
-    <PackageReference Include="Microsoft.Agents.AI.Tools.Shell" Version="1.25.0-preview.261014.1" />
-    <PackageReference Include="Microsoft.Agents.AI.Valkey" Version="1.25.0-alpha.261014.1" />
-    <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative" Version="1.25.0" />
-    <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative.Mcp" Version="1.25.0" />
-    <PackageReference Include="Microsoft.Agents.AI.Workflows.Generators" Version="1.26.0">
+    <PackageReference Include="Microsoft.Agents.AI" Version="1.28.0" />
+    <PackageReference Include="Microsoft.Agents.AI.Foundry" Version="1.28.0-preview.261106.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Hosting.AGUI.AspNetCore" Version="1.28.0-preview.261106.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Hyperlight" Version="1.28.0-preview.261106.1" />
+    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.28.0" />
+    <PackageReference Include="Microsoft.Agents.AI.Tools.Shell" Version="1.28.0-preview.261106.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Valkey" Version="1.28.0-alpha.261106.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative" Version="1.28.0" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows.Declarative.Mcp" Version="1.28.0" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows.Generators" Version="1.28.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Agents.ObjectModel" Version="2026.10.14.272" />
-    <PackageReference Include="Microsoft.Agents.ObjectModel.Json" Version="2026.10.14.272" />
-    <PackageReference Include="Microsoft.Agents.ObjectModel.PowerFx" Version="2026.10.14.272" />
-    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="10.11.0" />
-    <PackageReference Include="ModelContextProtocol" Version="2.2.0" />
-    <PackageReference Include="OpenTelemetry" Version="1.19.1" />
-    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.19.1" />
-    <PackageReference Include="OpenAI" Version="2.14.0" />
-    <PackageReference Include="Valkey.Glide" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Agents.ObjectModel" Version="2026.11.17.301" />
+    <PackageReference Include="Microsoft.Agents.ObjectModel.Json" Version="2026.11.17.301" />
+    <PackageReference Include="Microsoft.Agents.ObjectModel.PowerFx" Version="2026.11.17.301" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="11.0.0" />
+    <PackageReference Include="ModelContextProtocol" Version="2.4.0" />
+    <PackageReference Include="OpenTelemetry" Version="1.21.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.21.0" />
+    <PackageReference Include="OpenAI" Version="2.15.0" />
+    <PackageReference Include="Valkey.Glide" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
